@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>توافق‌نامه طراحی و راه‌اندازی وب‌سایت رستوران کته</title>
+  <style>
+    @font-face { font-family: Vazirmatn; src: url('../public/fonts/Vazirmatn.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e7e9e5; color: #252c28; font-family: Vazirmatn, sans-serif; font-size: 10pt; line-height: 1.65; }
+    .sheet { position: relative; width: 210mm; height: 297mm; padding: 13mm 17mm 17mm; background: white; margin: 8mm auto; box-shadow: 0 2mm 8mm #20352b18; break-after: page; }
+    .sheet:last-child { break-after: auto; }
+    .sheet::before { content: ''; position: absolute; top: 0; left: 17mm; right: 17mm; height: 1.5mm; background: #173f32; }
+    h1, h2, h3, p { margin: 0; }
+    .letterhead { display: flex; align-items: center; justify-content: space-between; gap: 8mm; padding-bottom: 5mm; border-bottom: .3mm solid #b29d6c; margin-bottom: 3.5mm; }
+    .overline { font-size: 8pt; color: #747a70; margin-bottom: 1mm; }
+    h1 { font-size: 18pt; font-weight: 750; color: #173f32; line-height: 1.55; }
+    .subtitle { font-size: 10pt; color: #576258; margin-top: 1mm; }
+    .project-mark { flex: 0 0 25mm; border-right: .3mm solid #d9ddcf; padding-right: 5mm; text-align: center; color: #173f32; }
+    .project-mark strong { display: block; font-size: 28pt; font-weight: 800; line-height: 1.4; }
+    .project-mark span { font-size: 7.5pt; color: #797354; }
+    .meta { display: flex; justify-content: space-between; gap: 7mm; font-size: 8.5pt; margin-bottom: 3mm; }
+    .blank { display: inline-block; min-width: 29mm; height: 5mm; border-bottom: .22mm dotted #8b948a; vertical-align: baseline; }
+    .blank.short { min-width: 18mm; }
+    .blank.wide { min-width: 72mm; }
+    .intro { font-size: 9pt; color: #51594f; margin-bottom: 3mm; }
+    .article { margin-top: 2.5mm; break-inside: avoid; }
+    .article h2 { display: flex; align-items: center; gap: 2.2mm; color: #173f32; font-weight: 750; font-size: 10.3pt; margin-bottom: 1mm; }
+    .number { display: inline-flex; align-items: center; justify-content: center; min-width: 6mm; height: 6mm; border: .25mm solid #d2d8cb; border-radius: 1mm; font-size: 8pt; font-weight: 650; }
+    .article p { text-align: justify; }
+    .article p + p { margin-top: 1.3mm; }
+    .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 2mm; }
+    .party { border: .25mm solid #d9ddd3; border-radius: 1.3mm; padding: 2.3mm 3mm; }
+    .party h3 { color: #173f32; font-size: 9pt; font-weight: 750; padding-bottom: 1.2mm; margin-bottom: 1mm; border-bottom: .2mm solid #e6e9df; }
+    .field { display: flex; align-items: baseline; gap: 1.5mm; font-size: 8.3pt; min-height: 6.4mm; white-space: nowrap; }
+    .fill { flex: 1; border-bottom: .22mm dotted #929b8e; height: 5.2mm; min-width: 4mm; }
+    .note { font-size: 8pt; line-height: 1.7; color: #656e62; margin-top: 1.5mm; }
+    .scope { padding: 2mm 3mm; background: #f5f6f0; border-right: .7mm solid #b39b63; margin-bottom: 1.6mm; }
+    .price-box { border: .25mm solid #d9ddd3; border-radius: 1.3mm; padding: 1.5mm 3mm; margin: 1.5mm 0; }
+    .price-box .field { font-size: 9pt; min-height: 7mm; }
+    .payment { display: grid; grid-template-columns: 1fr 1fr; margin-top: 2mm; border-top: .2mm solid #e4e7dd; }
+    .payment > div { padding-top: 1.5mm; font-size: 8.5pt; }
+    .payment strong { color: #173f32; font-size: 12pt; margin-left: 2mm; }
+    .payment > div + div { border-right: .2mm solid #e4e7dd; padding-right: 3mm; }
+    .second-head { padding-bottom: 2mm; margin-bottom: 2mm; }
+    .second-head h1 { font-size: 14pt; }
+    .second-head .project-mark strong { font-size: 22pt; }
+    .second-head .subtitle { font-size: 8.5pt; }
+    .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 4mm; }
+    .signature { border: .25mm solid #b6bfb0; border-radius: 1.2mm; padding: 2.5mm 3mm; min-height: 38mm; }
+    .signature h3 { color: #173f32; font-size: 9pt; margin-bottom: 1mm; display: flex; justify-content: space-between; align-items: baseline; gap: 2mm; }
+    .signature h3 span { font-size: 7.5pt; font-weight: 400; white-space: nowrap; }
+    .signature h3 .blank { min-width: 17mm; }
+    .signature .field { font-size: 8.5pt; }
+    .signature-space { font-size: 8pt; color: #6b7566; margin-top: 1mm; }
+    .page-footer { position: absolute; left: 17mm; right: 17mm; bottom: 8mm; height: 6mm; border-top: .25mm solid #dce0d6; display: flex; align-items: end; justify-content: space-between; color: #737c6d; font-size: 7.5pt; }
+    .initials { display: flex; gap: 7mm; }
+    .initials span { min-width: 35mm; }
+    .page-count { color: #173f32; }
+    b { font-weight: 650; }
+    @media print { body { background: white; } .sheet { margin: 0; box-shadow: none; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  </style>
+</head>
+<body>
+  <section class="sheet" aria-label="صفحه اول قرارداد">
+    <header class="letterhead">
+      <div><p class="overline">توافق‌نامه ارائه خدمات</p><h1>طراحی و راه‌اندازی وب‌سایت</h1><p class="subtitle">ویژهٔ رستوران کته · معرفی رستوران و منوی دیجیتال</p></div>
+      <div class="project-mark"><strong>کته</strong><span>موضوع همکاری</span></div>
+    </header>
+    <div class="meta"><span>شماره: <span class="blank short"></span></span><span>تاریخ: <span class="blank"></span></span><span>محل تنظیم: <span class="blank"></span></span></div>
+    <p class="intro">این توافق‌نامه در چارچوب قوانین جمهوری اسلامی ایران و با هدف تعیین خدمات، هزینه و شرایط همکاری، میان طرفین زیر منعقد می‌شود.</p>
+    <section class="article">
+      <h2><span class="number">۱</span> طرفین توافق</h2>
+      <div class="parties">
+        <div class="party"><h3>کارفرما · سفارش‌دهنده</h3><div class="field">نام شخص / شرکت:<span class="fill"></span></div><div class="field">کد ملی / شناسه ملی:<span class="fill"></span></div><div class="field">نماینده و سمت (در صورت وجود):<span class="fill"></span></div><div class="field">شماره تماس:<span class="fill"></span></div><div class="field">نشانی:<span class="fill"></span></div><div class="field"><span class="fill"></span></div></div>
+        <div class="party"><h3>مجری · طراح وب‌سایت</h3><div class="field">نام و نام خانوادگی:<span class="fill"></span></div><div class="field">کد ملی:<span class="fill"></span></div><div class="field">شماره تماس:<span class="fill"></span></div><div class="field">ایمیل / پیام‌رسان:<span class="fill"></span></div><div class="field">نشانی:<span class="fill"></span></div><div class="field"><span class="fill"></span></div></div>
+      </div>
+      <p class="note">امضاکننده از طرف کارفرما، مسئولیت داشتن اختیار لازم برای سفارش و تأیید خدمات را می‌پذیرد.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۲</span> موضوع و محدودهٔ خدمات</h2>
+      <p class="scope">تکمیل و راه‌اندازی یک وب‌سایت تک‌صفحه‌ای فارسی و راست‌به‌چپ با طراحی سبز و کرم و نمایش مناسب در موبایل و رایانه؛ شامل معرفی رستوران، تصاویر، ورود ۱۴ قلم غذای منوی فعلی، فیلتر دسته‌بندی و قیمت‌ها، اطلاعات تماس و مسیریابیِ تأییدشده، راه‌اندازی روی دامنهٔ توافق‌شده، تهیهٔ QR منو و تحویل فایل‌ها و راهنمای کوتاه.</p>
+      <p>وب‌سایت این مرحله بدون پنل مدیریت، سفارش و پرداخت آنلاین، رزرو یا پایگاه داده تحویل می‌شود. تغییر محتوا توسط مجری انجام می‌گیرد و افزودن امکانات جدید، نیازمند توافق جداگانه است.</p>
+      <div class="field">شناسهٔ فایل یا نشانی طرح مبنای مورد تأیید طرفین:<span class="fill"></span></div>
+    </section>
+    <section class="article">
+      <h2><span class="number">۳</span> مبلغ و نحوهٔ پرداخت</h2>
+      <div class="price-box"><div class="field">مبلغ کل خدمات به عدد:<span class="fill"></span>تومان</div><div class="field">به حروف:<span class="fill"></span>تومان</div><div class="payment"><div><strong>۵۰٪</strong> هنگام امضا و شروع کار</div><div><strong>۵۰٪</strong> پس از تأیید کار، هم‌زمان با تحویل نهایی</div></div></div>
+      <p>مبلغ فوق برای خدمات توافق‌شده ثابت است. هزینهٔ دامنه، میزبانی، عکاسی و خدمات ثالث جداگانه و صرفاً با اعلام مبلغ و تأیید کتبی کارفرما انجام می‌شود؛ هیچ هزینهٔ افزوده‌ای بدون تأیید قبلی قابل مطالبه نیست. دریافت هر پرداخت توسط مجری تأیید می‌شود.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۴</span> مدت اجرا و اطلاعات مورد نیاز</h2>
+      <p>مدت اجرا <span class="blank short"></span> روز کاری، از تاریخ دریافت پیش‌پرداخت و تکمیل اطلاعات لازم است. کارفرما متن، منو، قیمت‌ها، تصاویر و اطلاعات تماس را ارائه یا تأیید می‌کند و مجوز استفاده از محتوای ارسالی خود را بر عهده دارد. تأخیر در ارائهٔ اطلاعات یا تأییدها، با اطلاع مجری، زمان‌بندی را به همان میزان جابه‌جا می‌کند.</p>
+      <p class="note">روز کاری در این توافق: شنبه تا پنجشنبه، به‌استثنای تعطیلات رسمی. تاریخ شروع مورد توافق: <span class="blank"></span></p>
+    </section>
+    <footer class="page-footer"><div class="initials"><span>امضای کارفرما:</span><span>امضای مجری:</span></div><span class="page-count">صفحهٔ ۱ از ۲</span></footer>
+  </section>
+
+  <section class="sheet" aria-label="صفحه دوم قرارداد">
+    <header class="letterhead second-head"><div><p class="overline">ادامهٔ توافق‌نامه</p><h1>شرایط اجرا، تحویل و پشتیبانی</h1><p class="subtitle">شمارهٔ توافق: <span class="blank short"></span> &nbsp; تاریخ: <span class="blank"></span></p></div><div class="project-mark"><strong>کته</strong><span>وب‌سایت رستوران</span></div></header>
+    <section class="article">
+      <h2><span class="number">۵</span> اصلاحات و تأیید نسخهٔ نهایی</h2>
+      <p>دو نوبت اصلاح تجمیع‌شدهٔ متن، تصاویر و جزئیات ظاهری، در محدودهٔ طرح مبنا، در مبلغ قرارداد منظور شده است. کارفرما ظرف پنج روز کاری پس از دریافت نسخهٔ قابل بررسی، تأیید یا فهرست اصلاحات خود را اعلام می‌کند. سکوت به‌منزلهٔ تأیید نیست و در صورت تأخیر، زمان‌بندی ادامهٔ کار با هماهنگی طرفین تنظیم می‌شود. رفع نقص فنی یا عدم انطباق با این توافق، جزو دو نوبت اصلاح محسوب نمی‌شود.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۶</span> تحویل و راه‌اندازی</h2>
+      <p>تحویل شامل وب‌سایت، فایل‌های قابل ویرایش پروژه، راهنمای کوتاه و دسترسی‌های مربوط است. پس از تأیید کتبی کارفرما، تسویه، تحویل و انتشار روی دامنهٔ توافق‌شده هم‌زمان انجام می‌شود. مجری عملکرد منو، لینک‌ها و نمایش موبایل را بررسی می‌کند؛ کارفرما صحت قیمت‌ها، اطلاعات تماس و تصاویر نهایی را پیش از انتشار تأیید می‌کند.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۷</span> پشتیبانی و به‌روزرسانی</h2>
+      <p>از تاریخ تحویل نهایی، ۳۰ روز رفع اشکالات فنی ناشی از اجرای مجری و دو نوبت به‌روزرسانی تجمیع‌شدهٔ قیمت‌های منو، بدون هزینه ارائه می‌شود. دریافت درخواست حداکثر ظرف دو روز کاری تأیید و زمان رسیدگی اعلام می‌گردد. تغییر امکانات، محتوای جدید و خدمات پس از این دوره با توافق جداگانه انجام می‌شود و اشتراک ماهانهٔ اجباری وجود ندارد.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۸</span> حقوق پروژه و محرمانگی</h2>
+      <p>دامنه و حساب میزبانی به نام کارفرما ثبت می‌شوند. پس از تسویه، حقوق مادی استفاده، انتشار، تغییر و توسعهٔ بخش‌های اختصاصیِ ایجادشده برای این پروژه به کارفرما واگذار می‌شود؛ حقوق معنوی پدیدآورنده محفوظ است. ابزارهای عمومی مجری و کتابخانه‌ها، فونت‌ها و تصاویر ثالث تابع مجوز خود هستند. طرفین از اطلاعات و دسترسی‌های غیرعمومی یکدیگر حفاظت می‌کنند. نمایش پروژه در نمونه‌کار مجری به اجازهٔ کتبی کارفرما نیاز دارد.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۹</span> شرایط خارج از اختیار و حدود تعهد</h2>
+      <p>اگر اختلال اینترنت، قطع برق یا شرایط خارج از اختیار طرفین مستقیماً مانع اجرا شود، طرف متأثر در اولین فرصت اطلاع می‌دهد و زمان ادامهٔ کار با توافق کتبی تعیین می‌شود. تعهد مجری، اجرای صحیح خدمات این توافق است؛ میزان فروش، تعداد مشتری یا رتبهٔ جست‌وجو تضمین نمی‌شود. این بند مسئولیت مجری در قبال اجرای صحیح خدمات را رفع نمی‌کند.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۱۰</span> خاتمهٔ همکاری و حل اختلاف</h2>
+      <p>طرفین می‌توانند با توافق کتبی همکاری را خاتمه دهند. در صورت انجام‌نشدن تعهد اساسی، طرف مقابل ابتدا موضوع را کتبی اعلام و هفت روز کاری برای رفع آن مهلت می‌دهد؛ پس از انقضای مهلت و رفع‌نشدن موضوع، حق فسخ دارد. در خاتمه، ارزش کار انجام‌شده و هزینه‌های قبلاً تأییدشده، با ارائهٔ مستندات، محاسبه و ماندهٔ وجه یا طلب تسویه می‌شود؛ پیش‌پرداخت خودکار ضبط نمی‌شود. اختلاف ابتدا از طریق مذاکره و در صورت عدم توافق، در مرجع قضایی صالح رسیدگی می‌شود.</p>
+    </section>
+    <section class="article">
+      <h2><span class="number">۱۱</span> ثبت توافق‌ها و امضا</h2>
+      <p>تأییدها و تغییرات با نوشتهٔ امضاشده یا پیام صریحِ قابل انتساب ثبت می‌شوند. این توافق در ۱۱ ماده و دو صفحه، در دو نسخهٔ یکسان به طرفین تحویل می‌شود. جاهای خالی پیش از امضا تکمیل و تغییرات دستی به امضای طرفین می‌رسد.</p>
+    </section>
+    <div class="signatures"><div class="signature"><h3>کارفرما / نمایندهٔ مجاز <span>تاریخ: <span class="blank"></span></span></h3><div class="field">نام و نام خانوادگی:<span class="fill"></span></div><p class="signature-space">امضا و مهر، در صورت وجود:</p></div><div class="signature"><h3>مجری <span>تاریخ: <span class="blank"></span></span></h3><div class="field">نام و نام خانوادگی:<span class="fill"></span></div><p class="signature-space">امضا:</p></div></div>
+    <footer class="page-footer"><span>توافق‌نامهٔ طراحی و راه‌اندازی وب‌سایت رستوران کته</span><span class="page-count">صفحهٔ ۲ از ۲</span></footer>
+  </section>
+</body>
+</html>
